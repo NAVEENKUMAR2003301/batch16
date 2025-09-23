@@ -1,3 +1,6 @@
+
+
+
 // variable
 
 // variable main use to store the data
@@ -537,25 +540,363 @@ let pwdInput = 0;
 pwdInput ? console.log("allow the web") : console.log("your password is wrong");
 
 
+// looping statement
+
+// for loop
+
+// while loop
+
+// do while loop
+
+// for of 
+
+// for in
 
 
- 
+// for loop
+
+// for(intiialization; condition ; itration){
+//   //statement
+// }
+
+for(let i = 1 ; i<=5 ; i++){ // i = 1 ; 1<=5 true ; 1++ = 2
+  console.log(i); // 1 2 3 4 5  // i = 2 ; 2<=5 true ; 2++ = 3
+                              // i =3  ; 3<=5 true ; 3++ = 4
+                              // i = 4 ; 4<=5 true ; 4++ = 5
+                              // i=5   ; 5<=5 true ; 5++ =6
+                              // i=6   ; 6<=5 false
+}
 
 
- 
+// 2 multiply table
+
+for(let i = 1; i<=10 ; i++){
+  console.log(`${i}*2=${i*2}`);
+}
+
+// 3 odd num
+
+for(let i=1;i<=10;i++){
+  if(i%2==1){
+    console.log("add value :- " + i);
+    
+  }else{
+    console.log("event value :- " + i);
+    
+  }
+}
+
+console.clear();
 
 
+// while loop
+
+// intialiazation
+// while(){
+// statement;
+// iteration
+//}
+
+
+let val = 10
+while(val>=100){
+  console.log(val);
+  val++
+}
+
+// do while
+
+// intialiazation
+// do{
+// statement; iteration
+//}
+// while(condition)
+
+
+let val1 = 10
+
+do{
+  console.log(val1); val1++
+}
+
+while(val1>=100)
+
+
+
+// for of loop - string, array , function
+
+let example = "javascript"
+let example1 = ["apple","orange","banana"]
+
+for(let team of example1){
+  console.log(team);
+  
+}
+
+// for in loop - object
+
+let example2 = {
+  highVal : "rolls",
+  minimumVal : "audi",
+  leastVal : "ford"
+}
+
+
+for(let team1 in example2){
+  console.log(example2[team1]);
+  
+}
+
+for(let team2 in example){
+  console.log(team2);
+  
+}
+
+console.clear();
+
+ 
+// FUNCTION
+
+function one(a){
+  console.log(a);
+}
+
+one("hello")
+
+let emp = {
+  ename : "john",
+  eAge : 22
+}
+
+let emp1 = ["john",21,"software Engineer"]
+
+function one1(b){
+  return(b)
+}
+
+let returnVal = one1(1000)
+
+console.log(returnVal);
+
+function three(){
+  console.log(10+returnVal);
+  
+}
+
+three()
+
+
+// scopes
+
+// var - global scope or function scope
+// let - block scope
+// const - block scope
+
+const ant = 10
+console.log(ant);
+
+
+function four(){
+  if(true){
+    const one2 = "i am a block scope"
+    console.log(one2);
+  }
+
+  
+}
+
+four()
+
+
+// function types 
+
+
+// named function
+
+function named(){
+  console.log("i am named function");
+  
+}
+named()
+
+
+// annonymous function
+
+var annoymous = function () {
+  console.log("i am annonymous function");
+};
+annoymous()
+
+
+
+
+// arrow function
+
+var arrow =()=>{
+  console.log("i am a arrow function");
+  
+}
+arrow()
+
+console.clear();
+
+
+function random(){
+  console.log("i am work");
+}
+
+random()
+  // self invoke function
+
+//   (function (offer) {
+//     alert("sales offer now " + offer + "off");
+//   }
+// )(75);
+
+// default parameter
+
+function form(a,b,c,d="no"){
+  console.log("name ",a);
+  console.log("department ",b);
+  console.log("age ",c);
+  console.log("disablity ",d);
+}
+form("kamal","ece",22)
+
+
+// generator function
+
+function*genFun(){
+  yield "try again"
+  yield "best luck try again"
+  yield "your won"
+  yield "try again"
+}
+
+let finalVal = genFun()
+
+console.log(finalVal.next().value);
+console.log(finalVal.next().done);
+console.log(finalVal.next());
+console.log(finalVal.next());
+console.log(finalVal.next());
+
+
+// callback & higherorder function
+
+function function1(){
+  console.log("higher order function");
+  
+}
+
+function function2(){
+  console.log("callback function");
+  
+}
+
+function1(function2())
+
+
+function add(callback,a,b){ //callback=sub,a=20,b=40
+  console.log(a+b);//60
+  callback(20,20)//sub(20,20)
+}
+
+function sub(num1,num2){
+  console.log(num1-num2);//0
+  
+}
+
+
+add(sub,20,40)
+
+
+// Es6 edition
+
+// spread operator
+
+// array , object
+
+// [...], {...}
+
+// merge,clone
+
+// array
+
+let arr1 = [1,2,3,4]
+let arr2 = [5,6,7,8]
+
+let finalVal1 = [...arr1,...arr2,9,10]
+
+console.log(finalVal1);
+
+// object
+
+let obj1 = {
+  ename : "ram",
+  position : "trainee",
+  salary : 10000
+}
+
+let obj2 = {
+  ename1 : "ram",
+  position1 : "developer",
+  salary1 : 25000
+
+}
+ 
+
+let finalObj = {...obj1,...obj2}
+
+console.log(finalObj);
+
+
+// rest operator
+
+// function
+
+// (...)
+
+// we can multiple argument in single parameter
+
+function hello(a,b,c,...d){
+  console.log(a+b+c);
+  console.log(d[1]);
+  
+  
+}
+
+hello(1,2,3,4,5,6,7,8)
+
  
  
+ // destracture
+
+ // normal
+ let fruit = ["apple","banana","cherry"]
+
+ let firstFruit = fruit[0]
  
  
+//  console.log("the red fruit is",firstFruit);
+//  console.log("100 inr in the fruit",firstFruit);
+ 
+ // destracture
+
+
+ let [c1,c2,c3]=fruit
+
+  console.log("the red fruit is", c1);
+  console.log("100 inr in the fruit", c2);
  
  
+ let nested = [1,2,3,4,[5,6,[7]]]
  
- 
- 
- 
- 
+ console.log(nested[4][2][0])
+
+ let [d1,d2,d3,d4,[d5,d6,[d7]]]=nested
+
+ console.log(d5);
  
  
  
