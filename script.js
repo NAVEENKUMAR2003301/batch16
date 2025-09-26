@@ -898,15 +898,497 @@ hello(1,2,3,4,5,6,7,8)
 
  console.log(d5);
  
+
+ console.clear();
+
+
+ //Array manipulate method
+
+ // pop() - array last value remove
+ // push() - array last value adding
+ // shift() - array first value remove
+ // unshift() - array first value add
+ // splice()
+
+ let sample = [1,2,3,4]
+
+ sample.pop()
+
+ sample.push(4,5,6,7,8)
+
+ sample.shift()
+
+ sample.unshift(0,1)
+
+ console.log(sample);
+
+ // splice
+
+ let sample1 = [1,2,3,4,5]
+
+ sample1.splice(1,3,20,30,40)// SI,DeleteCount,Adding
+
+ console.log(sample1);
+
+
+ // Array Concat method
+
+ // concat()
+
+ let sample2 = [1,2,3,4]
+ let sample3 = [5,6,7.8]
+
+ let sampleFinalVal = sample2.concat(sample3)
+
+ console.log(sampleFinalVal);
+ 
+
+ // flat()
+ 
+  let nested1 = [1,2,3,[4,5,6,[7,8,[9]]]]
+  // console.log(nested1[3][3][2][0]);
+  
+  // let [d11,d21,d31,[d41,d51,d61,[d71,d81,[d91]]]]=nested1
+
+  // console.log(d51);
+
+  let nested1Val = nested1.flat(Infinity)
+
+  console.log(nested1Val);
+   
+ // slice()
+
+ let sample4 = [1,2,3,4,5]
+
+ let sample4Val = sample4.slice(1,4)// SI,EI
+
+ console.log(sample4Val);
+ 
+ // fill()
+let sample5 = [1,2,3,4]//1,2,"three",4
+
+sample5.fill("three",2,3)// value,si,ei
+
+console.log(sample5);
+
+
+ // sort()
+
+let sample6 = ["a","A",3,4,1,6,8,2,9,100,678]
+
+let sample6Val = sample6.sort()
+
+console.log(sample6Val);
+
+
+ // reverse()
+
+ let sample7 = [2,3,4,5,6]
+
+ sample7.reverse()
+
+ console.log(sample7);
+ 
+
+ // includes()
+ 
+ let sample8 = [10,20,30,40]
+
+ let sample8Val = sample8.includes(10)
+
+ console.log(sample8Val);
+ 
+
+
+ // indexof()
+
+ let sample9 = [10,20,10,30,40]
+
+ let sample9Val = sample9.indexOf(10,1)//value,SI
+
+ console.log(sample9Val);
+ 
+
+ // lastIndexOf()
+
+ let sample9Val1 = sample9.lastIndexOf(10,1)
+
+ console.log(sample9Val1);
+ 
+ 
+ console.clear();
  
  
  
+ // Array higher order method
+
+ // forEach()
+
+ let toy = ["rc car","uno","dron","puzzle","small toys"]
  
  
+ let storeForEachVal = toy.forEach((cle,i,toA)=>{
+  
+  return cle
+  
+ })
+
+ console.log(storeForEachVal);
+ 
+
+
+ // map()
+
+  let storeMapVal = toy.map((c,i,t)=>{
+  
+    return c
+  
+ })
+
+ console.log(storeMapVal);
+
+
+ // filter()
+
+ let employee = [
+
+  {ename : "a",salary : 100000},
+  {ename : "b",salary : 200000},
+  {ename : "c",salary : 300000},
+
+ ]
+
+ let empSalary = employee.filter((c,i,t)=>{
+  return c.salary>=200000
+ })
+
+ console.log(empSalary);
  
  
+ // find
+
+ let firstSalaryMember = employee.find((c,i,to)=>{
+  return c.salary >= 200000
+ })
+
+ console.log(firstSalaryMember);
+ 
+
+// reduce
+
+let totalSalary = employee.reduce((acc,c,i,t)=>{
+  return acc+c.salary
+},0)
+
+console.log(totalSalary);
+
+
+// array higher order function
+
+// sort
+
+let randomArr = [3,2,1,5,6,8,600,324]
+
+
+let SortVal = randomArr.sort()
+
+console.log(SortVal);
+
+let sortHigherOrder = randomArr.sort((a,b)=>{
+  return b-a
+})
+
+console.log(sortHigherOrder);
+
+
+// some - or
+
+ let checkVal = [2,2,2,4]
+
+ let someVal = checkVal.some((c,i,t)=>{
+  return c%2==0
+ })
+
+ console.log(someVal);
+ 
+
+// every - and
+
+let everyVal = checkVal.every((c,i,t)=>{
+return i%2==0
+})
+
+console.log(everyVal);
+
+ 
+console.clear();
+
+// string methods
+
+// charAt
+
+let str = "javascript"
+
+let strvalCharAt = str.charAt(0)
+
+console.log(strvalCharAt);
+
+// charCodeAt
+
+let charCodeAtVal = str.charCodeAt(1)
+
+console.log(charCodeAtVal);
+
+// indexOf
+
+let indexOfVal = str.indexOf("a")
+
+console.log(indexOfVal);
+
+// lastIndexOf
+
+str = "javascript";
+
+let lastIndexOfVal = str.lastIndexOf("a")
+
+console.log(lastIndexOfVal);
+
+// includes
+
+let includesVal = str.includes("a")
+
+console.log(includesVal);
+
+// repeat
+
+let repeatVal = str.repeat(5)
+
+console.log(repeatVal);
+
+// slice
+str = "javascript"
+
+let sliceVal = str.slice(4,10)
+
+console.log(sliceVal);
+
+// split
+
+let comic = "i like an iron-man spider-man thor captain"
+
+let splitVal = comic.split("a")
+
+console.log(splitVal);
+
+ // startsWidth
+
+ str = "javascript";
+
+ let startsWidthVal = str.startsWith("j")
+
+ console.log(startsWidthVal);
+
+ let endsWithVal = str.endsWith("t")
+
+ console.log(endsWithVal);
+
+ // trim
+
+ str = "  java  "
+
+ let trimVal = str.trim()
+
+ console.log(trimVal);
+
+ str = "JaVaSCript" // Javascript
+
+ let uppercaseVal = str.toUpperCase()
+
+ console.log(uppercaseVal);
+
+ let lowercaseVal = str.toLowerCase()
+
+ console.log(lowercaseVal);
+
+ console.clear();
  
  
+
+ // dates
+
+ let date = new Date()
+
+ console.log(date);
+ 
+ 
+ // get
+
+ // getFullyear()
+
+ let fullyear = date.getFullYear()
+
+ console.log(fullyear);
+
+ // getmonth()
+
+ let month = date.getMonth()
+
+ console.log(month);
+
+ // getDate()
+
+ let date1 = date.getDate()
+
+ console.log(date1);
+
+ // gatDay()
+
+ let day = date.getDay()
+
+ console.log(day);
+ 
+
+ // getHours()
+
+ let hours = date.getHours()
+
+ console.log(hours);
+ 
+
+ // getMinutes()
+
+ let minutes = date.getMinutes()
+
+ console.log(minutes);
+
+ // getSeconds
+
+ let seconds = date.getSeconds()
+
+ console.log(seconds);
+
+
+ let date11 = new Date()
+
+ console.log(date11);
+
+ // set
+
+ //setfullyear()
+
+ date11.setFullYear(2003)
+
+ console.log(date11);
+ 
+ // setMonth()
+
+ date11.setMonth(0)
+
+ console.log(date11);
+
+ // setDate()
+
+ date11.setDate(30)
+
+ console.log(date11);
+ 
+ // setHours()
+
+ date11.setHours(11)
+
+ console.log(date11);
+ 
+ // setMinutes()
+
+ date11.setMinutes(50)
+
+ console.log(date11);
+ 
+ 
+ // setSeconds()
+
+ date11.setSeconds(50)
+
+ console.log(date11);
+ 
+ 
+
+ // local methods
+
+ let date12 = new Date()
+
+ console.log(date12);
+
+ // toLocaleTimeString
+
+ let time = date12.toLocaleTimeString()
+
+ console.log(time);
+
+ let datess = date12.toLocaleDateString()
+
+ console.log(datess);
+
+
+ let bothDT = date12.toLocaleString()
+
+ console.log(bothDT);
+ 
+ console.clear();
+ 
+
+ // asynchronous
+ 
+
+ // setTimeOut
+
+//  setTimeout(()=>{
+//    let date14 = new Date();
+//    let time1 = date14.toLocaleTimeString();
+//    console.log(time1);
+//  },2000)
+
+//  // setIntravel
+ 
+
+//  setInterval(()=>{
+//    let date14 = new Date();
+//    let time1 = date14.toLocaleTimeString();
+//    console.log(time1);
+//  },1000)
+ 
+
+ // promise
+
+ fetch("https://fakestoreapi.com/products/")
+ .then((success)=>{
+  return success.json()
+ })
+ .then((data)=>{
+  console.log(data);
+  data.forEach((c)=>{
+    console.log(c.title);
+    
+  })
+ 
+ })
+
+ .catch((error)=>{
+  console.log(error);
+  
+ })
+
+ console.log("hello");
+
+ setTimeout(()=>{
+  console.log("how are you");
+  
+ },1000)
+ 
+
+ 
+ 
+
  
  
  
