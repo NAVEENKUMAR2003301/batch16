@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: black;
+}
+
+.todo{
+    width: auto;
+    height: auto;
+
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 20px 20px teal;
+}
+
+.todo>input{
+   outline: none;
+   border: none;
+   background-color: transparent;
+   border-bottom: 2px dashed yellowgreen;
+}
+
+.todo>button{
+   outline: none;
+   border: 1px double black;
+   padding: 5px;
+   border-bottom-right-radius: 15px;
+   border-top-left-radius: 15px;
+   background-color: transparent;
+   cursor: pointer;
+}
+
+ol{
+    padding-left: 20px;
+}
+li{ 
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+li::before{
+    content: "*";
+    
+}
+
+.red{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+}
+
+.green{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    cursor: pointer;
+}
+
+.inp{
+    outline: none;
+   border: none;
+   background-color: transparent;
+   border-bottom: 2px dashed yellowgreen;
+}
+
+.bu{
+  outline: none;
+   border: 1px double black;
+   padding: 5px;
+   border-bottom-right-radius: 15px;
+   border-top-left-radius: 15px;
+   background-color: transparent;
+   cursor: pointer;
+}
