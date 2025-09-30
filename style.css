@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 10px;
 
     background-color: black;
@@ -89,4 +90,10 @@ li::before{
    border-top-left-radius: 15px;
    background-color: transparent;
    cursor: pointer;
+}
+
+h1{
+    color: aliceblue;
+    position: relative;
+    top: -100px;
 }
