@@ -30,20 +30,43 @@
      <h1>TO DO APPLICATION</h1>
 
      <input type="text"  value="hello">
-     <button onclick="save1()">save</button>
+     <button type="button" onclick=""  onclick="save1()">save</button>
      <ol>
        
      </ol> -->
-<h1>
-  <abbr title="TODO">ToDo</abbr>
-</h1>
-  <div class="todo">
-    <input type="text">
-    <button>add task</button>
-    <ol></ol>
-  </div>
 
 
+
+     <div class="calculator">
+        <input type="text" readonly>
+        <button type="button" onclick="addVal('%')" >%</button>
+        <button type="button" onclick="clearVal()" >C</button>
+        <button type="button" onclick="delVal()" >Del</button>
+        <button type="button" onclick="addVal('/')" >/</button>
+        <button type="button" onclick="addVal('7')" >7</button>
+        <button type="button" onclick="addVal('8')" >8</button>
+        <button type="button" onclick="addVal('9')" >9</button>
+        <button type="button" onclick="addVal('*')" >*</button>
+        <button type="button" onclick="addVal('4')" >4</button>
+        <button type="button" onclick="addVal('5')" >5</button>
+        <button type="button" onclick="addVal('6')" >6</button>
+        <button type="button" onclick="addVal('-')" >-</button>
+        <button type="button" onclick="addVal('1')" >1</button>
+        <button type="button" onclick="addVal('2')" >2</button>
+        <button type="button" onclick="addVal('3')" >3</button>
+        <button type="button" onclick="addVal('+')" >+</button>
+        <button type="button" onclick="addVal('00')" >00</button>
+        <button type="button" onclick="addVal('0')" >0</button>
+        <button type="button" onclick="addVal('.')" >.</button>
+        <button type="button" onclick="FinalVal()"  class="eq">=</button>
+     </div>
+
+     <div class="parent">
+       <div class="host" style="color: aqua;"></div>
+       <div class="host1" style="color: aqua;"></div>
+
+
+     </div>
     <script src="./script.js"></script>
 </body>
 </html>
